@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app:/app 
+    command: npm run dev 
+  redis:
+    image: redis
